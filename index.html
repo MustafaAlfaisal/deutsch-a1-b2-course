@@ -559,6 +559,14 @@ table.rules tbody td:nth-child(2){ font-weight:600; width:30%; }
 .quiz-result .qr-score{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(44px * var(--fs)); color:var(--level); }
 .quiz-result .qr-label{ font-size:calc(12.5px * var(--fs)); color:var(--text-faint); margin-bottom:20px; }
 .quiz-result .qr-msg{ font-size:calc(13.5px * var(--fs)); color:var(--text-dim); margin-bottom:22px; }
+
+/* ---------- footer ---------- */
+.app-footer{
+  max-width:1600px; margin:0 auto; padding:18px 44px 36px 44px; text-align:center;
+  font-size:calc(11.5px * var(--fs)); color:var(--text-faint); border-top:1px solid var(--border-soft);
+}
+.app-footer .footer-heart{ color:#E8475C; display:inline-block; }
+@media (max-width:860px){ .app-footer{ padding:16px 18px 30px 18px; } }
 </style>
 
 <div id="app">
@@ -596,6 +604,7 @@ table.rules tbody td:nth-child(2){ font-weight:600; width:30%; }
     <div id="view" class="view">
       <div class="empty-state">Loading course&hellip;</div>
     </div>
+    <footer class="app-footer">Made with <span class="footer-heart">&#10084;&#65039;</span> by Mustafa Alfaisal and Claude for the World</footer>
   </main>
 </div>
 

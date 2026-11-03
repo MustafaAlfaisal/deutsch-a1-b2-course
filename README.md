@@ -4,8 +4,6 @@ A complete, self-study German course covering CEFR levels A1 through B2 — buil
 
 **Live app:** https://mustafaalfaisal.github.io/deutsch-a1-b2-course/
 
-(also mirrored as a Claude artifact: https://claude.ai/artifact/VtmsQiutF4FH3BmgJwacfT)
-
 ## What's inside
 
 - 60 grammar/topic lessons (15 per level) with explanations, example sentences, tables, and quick-check questions
