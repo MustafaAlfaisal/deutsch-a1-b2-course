@@ -1,0 +1,1394 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Deutsch A1–B2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap">
+<style>
+/* ============ THEME TOKENS ============ */
+:root{
+  --bg:#FAF9F5; --bg-soft:#F2F0E9;
+  --surface:#FFFFFF; --surface-2:#F5F4EE;
+  --border:#E6E3D8; --border-soft:#EEEDE4;
+  --text:#1B2430; --text-dim:#5B6572; --text-faint:#8C93A0;
+  --navy:#101C2C; --navy-2:#1B2A3E; --navy-text:#9FB0C6;
+  --shadow-sm:0 1px 2px rgba(16,20,30,.05);
+  --shadow-md:0 10px 30px rgba(16,20,30,.08);
+  --radius-lg:20px; --radius-md:14px; --radius-sm:10px;
+  --ring-track:#EDECE3;
+  --hue0-rgb:194,65,12;  --hue0-fg:#B5390A; --hue0-chip:#FBCBA6;   /* orange */
+  --hue1-rgb:29,78,216;  --hue1-fg:#1D4ED8; --hue1-chip:#B9CFFF;   /* blue   */
+  --hue2-rgb:109,40,217; --hue2-fg:#6D28D9; --hue2-chip:#D5C4FF;   /* purple */
+  --hue3-rgb:190,24,93;  --hue3-fg:#A8135A; --hue3-chip:#FAC3DD;   /* pink   */
+  --hue4-rgb:14,122,60;  --hue4-fg:#0E7A3C; --hue4-chip:#B3EDC9;   /* green  */
+  --hue5-rgb:161,98,7;   --hue5-fg:#8A5606; --hue5-chip:#FCE2A0;   /* gold   */
+  --card-alpha:0.10;
+  --fs:1;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0A0E15; --bg-soft:#0D1220;
+    --surface:#101826; --surface-2:#151F30;
+    --border:rgba(255,255,255,.09); --border-soft:rgba(255,255,255,.06);
+    --text:#EDEFF4; --text-dim:#A7B0BE; --text-faint:#75808F;
+    --navy:#1B2A3E; --navy-2:#243348; --navy-text:#9FB0C6;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.3); --shadow-md:0 14px 34px rgba(0,0,0,.45);
+    --ring-track:#1C2635;
+    --hue0-fg:#FDBA74; --hue0-chip:rgba(194,65,12,.38);
+    --hue1-fg:#93C5FD; --hue1-chip:rgba(29,78,216,.38);
+    --hue2-fg:#C9B6FF; --hue2-chip:rgba(109,40,217,.4);
+    --hue3-fg:#F9A8D4; --hue3-chip:rgba(190,24,93,.38);
+    --hue4-fg:#86EFAC; --hue4-chip:rgba(14,122,60,.38);
+    --hue5-fg:#FBD673; --hue5-chip:rgba(161,98,7,.4);
+    --card-alpha:0.16;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0A0E15; --bg-soft:#0D1220;
+  --surface:#101826; --surface-2:#151F30;
+  --border:rgba(255,255,255,.09); --border-soft:rgba(255,255,255,.06);
+  --text:#EDEFF4; --text-dim:#A7B0BE; --text-faint:#75808F;
+  --navy:#1B2A3E; --navy-2:#243348; --navy-text:#9FB0C6;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.3); --shadow-md:0 14px 34px rgba(0,0,0,.45);
+  --ring-track:#1C2635;
+  --hue0-fg:#FDBA74; --hue0-chip:rgba(194,65,12,.38);
+  --hue1-fg:#93C5FD; --hue1-chip:rgba(29,78,216,.38);
+  --hue2-fg:#C9B6FF; --hue2-chip:rgba(109,40,217,.4);
+  --hue3-fg:#F9A8D4; --hue3-chip:rgba(190,24,93,.38);
+  --hue4-fg:#86EFAC; --hue4-chip:rgba(14,122,60,.38);
+  --hue5-fg:#FBD673; --hue5-chip:rgba(161,98,7,.4);
+  --card-alpha:0.16;
+}
+/* per-level tokens (light default) */
+[data-level="A1"]{ --level-rgb:22,163,74;  --level:#16A34A; --level-text:#0B5A2A; --level-tint:#E9F9EF; }
+[data-level="A2"]{ --level-rgb:37,99,235;  --level:#2563EB; --level-text:#173E9E; --level-tint:#EAF1FF; }
+[data-level="B1"]{ --level-rgb:234,88,12;  --level:#EA580C; --level-text:#9A3B0A; --level-tint:#FFF2E8; }
+[data-level="B2"]{ --level-rgb:124,58,237; --level:#7C3AED; --level-text:#5521B5; --level-tint:#F4EEFF; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) [data-level="A1"],:root:not([data-theme="light"])[data-level="A1"]{ --level-text:#6FE39A; --level-tint:rgba(22,163,74,.16); }
+  :root:not([data-theme="light"]) [data-level="A2"],:root:not([data-theme="light"])[data-level="A2"]{ --level-text:#7EA6FF; --level-tint:rgba(37,99,235,.18); }
+  :root:not([data-theme="light"]) [data-level="B1"],:root:not([data-theme="light"])[data-level="B1"]{ --level-text:#FDA45C; --level-tint:rgba(234,88,12,.16); }
+  :root:not([data-theme="light"]) [data-level="B2"],:root:not([data-theme="light"])[data-level="B2"]{ --level-text:#B79CFF; --level-tint:rgba(124,58,237,.18); }
+}
+:root[data-theme="dark"] [data-level="A1"],:root[data-theme="dark"][data-level="A1"]{ --level-text:#6FE39A; --level-tint:rgba(22,163,74,.16); }
+:root[data-theme="dark"] [data-level="A2"],:root[data-theme="dark"][data-level="A2"]{ --level-text:#7EA6FF; --level-tint:rgba(37,99,235,.18); }
+:root[data-theme="dark"] [data-level="B1"],:root[data-theme="dark"][data-level="B1"]{ --level-text:#FDA45C; --level-tint:rgba(234,88,12,.16); }
+:root[data-theme="dark"] [data-level="B2"],:root[data-theme="dark"][data-level="B2"]{ --level-text:#B79CFF; --level-tint:rgba(124,58,237,.18); }
+
+/* ============ BASE ============ */
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:calc(15px * var(--fs)); line-height:1.5;
+}
+h1,h2,h3,.heading{ font-family:'Poppins','Inter',sans-serif; }
+a{ color:inherit; }
+button{ font-family:inherit; }
+::selection{ background:rgba(124,58,237,.22); }
+.hidden{ display:none!important; }
+:focus-visible{ outline:2px solid var(--level,#2563EB); outline-offset:2px; border-radius:4px; }
+
+#app{ display:flex; min-height:100vh; width:100%; align-items:flex-start; }
+
+/* ---------- sidebar ---------- */
+.sidebar{
+  width:296px; flex:0 0 296px; height:100vh; position:sticky; top:0;
+  background:var(--surface); border-right:1px solid var(--border);
+  display:flex; flex-direction:column; overflow:hidden; z-index:20;
+}
+.side-head{ display:flex; align-items:center; gap:10px; padding:18px 18px 12px 18px; }
+.brand{ display:flex; align-items:center; gap:10px; flex:1; min-width:0; }
+.brand-badge{
+  flex:0 0 auto; width:38px; height:38px; border-radius:11px;
+  background:linear-gradient(155deg,#16A34A 0%,#2563EB 34%,#EA580C 66%,#7C3AED 100%);
+  color:#fff; font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(12.5px * var(--fs));
+  display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-sm);
+}
+.brand-title{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(15.5px * var(--fs)); line-height:1.15; }
+.brand-sub{ font-size:calc(11px * var(--fs)); color:var(--text-faint); margin-top:1px; }
+.icon-btn{
+  flex:0 0 auto; width:34px; height:34px; border-radius:10px; border:1px solid var(--border);
+  background:var(--surface-2); color:var(--text-dim); cursor:pointer; font-size:calc(15px * var(--fs));
+  display:flex; align-items:center; justify-content:center; transition:background .15s,color .15s;
+}
+.icon-btn:hover{ background:var(--bg-soft); color:var(--text); }
+.side-search{ padding:0 18px 12px 18px; }
+.side-search input{
+  width:100%; padding:9px 12px; border-radius:10px; border:1px solid var(--border);
+  background:var(--bg-soft); color:var(--text); font-size:calc(13px * var(--fs)); font-family:inherit;
+}
+.side-search input::placeholder{ color:var(--text-faint); }
+.side-search input:focus{ outline:none; border-color:var(--text-faint); }
+.side-nav{ flex:1; overflow-y:auto; padding:2px 10px 14px 10px; }
+.side-foot{ padding:10px 18px 16px 18px; font-size:calc(10.5px * var(--fs)); letter-spacing:.5px; text-transform:uppercase; color:var(--text-faint); border-top:1px solid var(--border-soft); }
+
+.level-group{ margin-bottom:4px; border-radius:12px; overflow:hidden; }
+.level-group-head{
+  display:flex; align-items:center; gap:10px; padding:9px 8px; cursor:pointer; border-radius:10px;
+  background:transparent; border:none; width:100%; text-align:left; color:var(--text);
+}
+.level-group-head:hover{ background:var(--bg-soft); }
+.lg-code{
+  flex:0 0 auto; width:26px; height:26px; border-radius:8px; background:var(--level);
+  color:#fff; font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(10.5px * var(--fs));
+  display:flex; align-items:center; justify-content:center;
+}
+.lg-name{ flex:1; min-width:0; display:flex; flex-direction:column; gap:1px; }
+.lg-name .n1{ font-size:calc(12.8px * var(--fs)); font-weight:700; }
+.lg-name .n2{ font-size:calc(10.3px * var(--fs)); color:var(--text-faint); }
+.lg-frac{ font-size:calc(10.5px * var(--fs)); color:var(--text-faint); font-variant-numeric:tabular-nums; }
+.lg-chev{ flex:0 0 auto; font-size:calc(9px * var(--fs)); color:var(--text-faint); transition:transform .18s; }
+.level-group.open .lg-chev{ transform:rotate(90deg); }
+.level-group-bar{ height:3px; border-radius:3px; background:var(--ring-track); margin:2px 10px 6px 44px; overflow:hidden; }
+.level-group-bar i{ display:block; height:100%; background:var(--level); border-radius:3px; }
+.level-topics{ display:flex; flex-direction:column; gap:1px; padding:2px 0 8px 0; }
+.level-group:not(.open) .level-topics,.level-group:not(.open) .level-group-bar{ display:none; }
+
+.topic-link{
+  display:flex; align-items:center; gap:9px; padding:7px 10px 7px 44px; border-radius:9px;
+  cursor:pointer; text-decoration:none; color:var(--text-dim); font-size:calc(12.6px * var(--fs));
+}
+.topic-link:hover{ background:var(--bg-soft); color:var(--text); }
+.topic-link.active{ background:var(--level-tint); color:var(--text); }
+.topic-link .tl-num{ flex:0 0 auto; width:16px; color:var(--text-faint); font-variant-numeric:tabular-nums; font-size:calc(11px * var(--fs)); }
+.topic-link.active .tl-num{ color:var(--level); font-weight:700; }
+.topic-link .tl-title{ flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topic-link .tl-check{ flex:0 0 auto; width:14px; height:14px; border-radius:50%; border:1.5px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:calc(8px * var(--fs)); color:transparent; }
+.topic-link .tl-check.done{ background:var(--level); border-color:var(--level); color:#fff; }
+
+.search-results{ padding:4px 4px 0 4px; }
+.search-results .sr-head{ font-size:calc(10.5px * var(--fs)); letter-spacing:.6px; text-transform:uppercase; color:var(--text-faint); padding:8px 10px 6px 10px; }
+.search-results .topic-link{ padding-left:12px; }
+.search-results .topic-link .tl-lv{
+  flex:0 0 auto; font-size:calc(9px * var(--fs)); font-weight:700; color:#fff; background:var(--level);
+  padding:2px 6px; border-radius:6px; font-family:'Poppins',sans-serif;
+}
+.search-empty{ padding:16px 12px; color:var(--text-faint); font-size:calc(12.5px * var(--fs)); }
+
+/* ---------- mobile chrome ---------- */
+.menu-btn{
+  display:none; position:fixed; top:14px; left:14px; z-index:40; width:42px; height:42px;
+  border-radius:12px; border:1px solid var(--border); background:var(--surface); color:var(--text);
+  box-shadow:var(--shadow-md); font-size:calc(18px * var(--fs)); align-items:center; justify-content:center; cursor:pointer;
+}
+.backdrop{ display:none; position:fixed; inset:0; background:rgba(10,14,20,.45); z-index:15; }
+
+/* ---------- main / layout ---------- */
+.main{ flex:1; min-width:0; }
+.view{ max-width:1600px; margin:0 auto; padding:40px 44px 90px 44px; }
+
+/* ============ DASHBOARD ============ */
+.dash-hero{ display:flex; align-items:center; gap:28px; margin-bottom:34px; flex-wrap:wrap; }
+.dash-hero-text{ flex:1; min-width:220px; }
+.dash-kicker{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(11px * var(--fs)); letter-spacing:2.4px; text-transform:uppercase; color:var(--text-faint); margin-bottom:10px; }
+.dash-title{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(34px * var(--fs)); line-height:1.12; margin:0 0 10px 0; text-wrap:balance; }
+.dash-title .accent{ background:linear-gradient(90deg,#16A34A,#2563EB 40%,#EA580C 70%,#7C3AED); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.dash-sub{ font-size:calc(14px * var(--fs)); color:var(--text-dim); max-width:44ch; line-height:1.6; }
+.ring-wrap{ flex:0 0 auto; width:128px; height:128px; position:relative; }
+.ring{ width:128px; height:128px; border-radius:50%; background:conic-gradient(var(--navy) calc(var(--pct)*1%), var(--ring-track) 0); display:flex; align-items:center; justify-content:center; }
+.ring-inner{ width:98px; height:98px; border-radius:50%; background:var(--surface); display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:var(--shadow-sm); }
+.ring-inner .rv{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(22px * var(--fs)); }
+.ring-inner .rl{ font-size:calc(9px * var(--fs)); color:var(--text-faint); letter-spacing:.6px; text-transform:uppercase; margin-top:2px; }
+
+.continue-card{
+  display:flex; align-items:center; gap:14px; background:var(--navy); color:#fff; border-radius:var(--radius-lg);
+  padding:16px 20px; margin-bottom:30px; cursor:pointer; box-shadow:var(--shadow-md);
+}
+.continue-card .cc-ic{ flex:0 0 auto; width:44px; height:44px; border-radius:12px; background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; font-size:calc(21px * var(--fs)); }
+.continue-card .cc-mid{ flex:1; min-width:0; }
+.continue-card .cc-lbl{ font-size:calc(10.5px * var(--fs)); letter-spacing:1.2px; text-transform:uppercase; color:var(--navy-text); margin-bottom:3px; }
+.continue-card .cc-name{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(15px * var(--fs)); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.continue-card .cc-go{ flex:0 0 auto; font-size:calc(20px * var(--fs)); opacity:.8; }
+
+.section-label{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(12px * var(--fs)); letter-spacing:1.2px; text-transform:uppercase; color:var(--text-faint); margin:0 0 14px 0; }
+
+.level-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-bottom:36px; }
+.level-card{
+  border-radius:var(--radius-lg); padding:18px 18px 16px 18px; background:var(--surface); border:1px solid var(--border);
+  cursor:pointer; position:relative; overflow:hidden; transition:transform .15s,box-shadow .15s;
+}
+.level-card:hover{ transform:translateY(-2px); box-shadow:var(--shadow-md); }
+.level-card::before{ content:""; position:absolute; inset:0 0 auto 0; height:4px; background:var(--level); }
+.lc-top{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.lc-code{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(19px * var(--fs)); color:var(--level); }
+.lc-name{ font-size:calc(11.5px * var(--fs)); color:var(--text-faint); font-weight:600; }
+.lc-desc{ font-size:calc(12.3px * var(--fs)); color:var(--text-dim); line-height:1.5; margin-bottom:14px; min-height:52px; }
+.lc-bar{ height:6px; border-radius:6px; background:var(--ring-track); overflow:hidden; margin-bottom:7px; }
+.lc-bar i{ display:block; height:100%; background:var(--level); border-radius:6px; }
+.lc-foot{ display:flex; justify-content:space-between; font-size:calc(11px * var(--fs)); color:var(--text-faint); font-variant-numeric:tabular-nums; }
+
+.stat-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:8px; }
+.stat-tile{ background:var(--navy); border-radius:var(--radius-md); padding:15px 12px; text-align:center; }
+.stat-tile .sv{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(20px * var(--fs)); color:#fff; }
+.stat-tile .sl{ font-size:calc(9.5px * var(--fs)); color:var(--navy-text); margin-top:3px; letter-spacing:.3px; }
+
+@media (max-width:560px){ .level-cards{ grid-template-columns:1fr; } .stat-strip{ grid-template-columns:1fr 1fr; } }
+
+/* ============ TOPIC VIEW ============ */
+.crumb{ display:flex; align-items:center; gap:6px; font-size:calc(12px * var(--fs)); color:var(--text-faint); margin-bottom:18px; }
+.crumb a{ text-decoration:none; color:var(--text-faint); cursor:pointer; }
+.crumb a:hover{ color:var(--text); }
+.crumb .sep{ opacity:.5; }
+.crumb .cur{ color:var(--level-text); font-weight:600; }
+
+.eyebrow{
+  font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(10.5px * var(--fs)); letter-spacing:2px;
+  text-transform:uppercase; color:var(--level-text); margin-bottom:9px;
+}
+.eyebrow .dot{ opacity:.45; margin:0 6px; }
+
+.title-row{ display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:8px; }
+.t-title{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(26px * var(--fs)); line-height:1.18; margin:0; text-wrap:balance; flex:1; min-width:0; }
+.t-title .de{ display:block; }
+.t-title .en{ display:block; font-size:calc(14.5px * var(--fs)); font-weight:600; color:var(--level-text); margin-top:4px; }
+.unit-badge{
+  flex:0 0 auto; width:52px; height:52px; border-radius:15px; background:var(--level); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:calc(24px * var(--fs)); box-shadow:var(--shadow-sm);
+}
+.tag-pill{
+  display:inline-block; font-family:'Poppins',sans-serif; font-size:calc(10px * var(--fs)); font-weight:700; letter-spacing:.8px;
+  text-transform:uppercase; padding:5px 12px; border-radius:20px; color:#fff; background:var(--level); margin-bottom:14px;
+}
+.summary{ font-size:calc(13.6px * var(--fs)); line-height:1.65; color:var(--text-dim); margin:0 0 18px 0; }
+hr.rule{ border:none; border-top:1.5px solid var(--border-soft); margin:20px 0; }
+
+.card-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:11px; margin-bottom:16px; }
+.card{ border-radius:var(--radius-md); padding:14px 15px; }
+.card .c-icon{ width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:calc(17px * var(--fs)); margin-bottom:9px; }
+.card .c-de{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(13px * var(--fs)); margin-bottom:2px; }
+.card .c-en{ font-size:calc(9.8px * var(--fs)); font-weight:700; text-transform:uppercase; letter-spacing:.5px; opacity:.85; margin-bottom:6px; }
+.card .c-desc{ font-size:calc(11.3px * var(--fs)); line-height:1.48; color:var(--text-dim); }
+.card-grid .card:nth-child(6n+1){ background:rgba(var(--hue0-rgb),var(--card-alpha)); }
+.card-grid .card:nth-child(6n+1) .c-icon{ background:var(--hue0-chip); color:var(--hue0-fg); }
+.card-grid .card:nth-child(6n+1) .c-de,.card-grid .card:nth-child(6n+1) .c-en{ color:var(--hue0-fg); }
+.card-grid .card:nth-child(6n+2){ background:rgba(var(--hue1-rgb),var(--card-alpha)); }
+.card-grid .card:nth-child(6n+2) .c-icon{ background:var(--hue1-chip); color:var(--hue1-fg); }
+.card-grid .card:nth-child(6n+2) .c-de,.card-grid .card:nth-child(6n+2) .c-en{ color:var(--hue1-fg); }
+.card-grid .card:nth-child(6n+3){ background:rgba(var(--hue2-rgb),var(--card-alpha)); }
+.card-grid .card:nth-child(6n+3) .c-icon{ background:var(--hue2-chip); color:var(--hue2-fg); }
+.card-grid .card:nth-child(6n+3) .c-de,.card-grid .card:nth-child(6n+3) .c-en{ color:var(--hue2-fg); }
+.card-grid .card:nth-child(6n+4){ background:rgba(var(--hue3-rgb),var(--card-alpha)); }
+.card-grid .card:nth-child(6n+4) .c-icon{ background:var(--hue3-chip); color:var(--hue3-fg); }
+.card-grid .card:nth-child(6n+4) .c-de,.card-grid .card:nth-child(6n+4) .c-en{ color:var(--hue3-fg); }
+.card-grid .card:nth-child(6n+5){ background:rgba(var(--hue4-rgb),var(--card-alpha)); }
+.card-grid .card:nth-child(6n+5) .c-icon{ background:var(--hue4-chip); color:var(--hue4-fg); }
+.card-grid .card:nth-child(6n+5) .c-de,.card-grid .card:nth-child(6n+5) .c-en{ color:var(--hue4-fg); }
+.card-grid .card:nth-child(6n+6){ background:rgba(var(--hue5-rgb),var(--card-alpha)); }
+.card-grid .card:nth-child(6n+6) .c-icon{ background:var(--hue5-chip); color:var(--hue5-fg); }
+.card-grid .card:nth-child(6n+6) .c-de,.card-grid .card:nth-child(6n+6) .c-en{ color:var(--hue5-fg); }
+@media (max-width:560px){ .card-grid{ grid-template-columns:1fr; } }
+
+.pin-box{ display:flex; gap:11px; background:var(--surface-2); border-radius:var(--radius-md); padding:14px 16px; font-size:calc(12.6px * var(--fs)); line-height:1.6; color:var(--text-dim); margin-bottom:16px; }
+.pin-box .pin-ic{ flex:0 0 auto; font-size:calc(16px * var(--fs)); }
+.pin-box b{ color:var(--text); }
+
+.stat-bar{ display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:10px; margin-bottom:18px; }
+.stat-box{ background:var(--navy); border-radius:var(--radius-md); padding:13px 10px; text-align:center; }
+.stat-box .val{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(19px * var(--fs)); color:#fff; }
+.stat-box .lbl{ font-size:calc(9px * var(--fs)); color:var(--navy-text); margin-top:3px; letter-spacing:.3px; }
+
+.panel{ border:1.4px solid var(--border); border-radius:var(--radius-md); overflow:hidden; margin-bottom:16px; }
+.panel-head{ display:flex; align-items:center; gap:11px; padding:13px 15px; background:var(--surface-2); border-bottom:1.4px solid var(--border-soft); }
+.panel-head .p-icon{ width:32px; height:32px; border-radius:9px; background:rgba(var(--level-rgb),.18); color:var(--level-text); display:flex; align-items:center; justify-content:center; font-size:calc(15px * var(--fs)); flex:0 0 auto; }
+.panel-head .p-title{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(13px * var(--fs)); }
+.panel-head .p-sub{ font-size:calc(10.3px * var(--fs)); color:var(--text-faint); margin-top:1px; }
+.panel-head .p-count{ margin-left:auto; font-family:'Poppins',sans-serif; font-size:calc(10px * var(--fs)); font-weight:700; padding:4px 11px; border-radius:20px; color:#fff; background:var(--level); white-space:nowrap; }
+.tbl-wrap{ overflow-x:auto; }
+table.data,table.rules{ width:100%; border-collapse:collapse; min-width:420px; }
+table.data thead th,table.rules thead th{
+  background:var(--navy); color:#fff; text-align:left; font-family:'Poppins',sans-serif;
+  font-size:calc(9.2px * var(--fs)); letter-spacing:.8px; text-transform:uppercase; font-weight:700; padding:9px 13px; white-space:nowrap;
+}
+table.data thead th.num{ text-align:center; width:34px; }
+table.data tbody td{ padding:8px 13px; font-size:calc(12px * var(--fs)); border-top:1px solid var(--border-soft); vertical-align:top; }
+table.data tbody td.num{ text-align:center; color:var(--text-faint); font-size:calc(10.6px * var(--fs)); }
+table.data tbody td.de{ font-weight:700; white-space:nowrap; }
+table.data tbody tr:nth-child(even),table.rules tbody tr:nth-child(even){ background:var(--bg-soft); }
+table.data tbody td .mut{ color:var(--text-faint); font-style:italic; font-size:calc(11px * var(--fs)); }
+table.rules tbody td{ padding:9px 13px; font-size:calc(11.6px * var(--fs)); border-top:1px solid var(--border-soft); line-height:1.5; }
+table.rules tbody td:first-child{ font-weight:700; width:26%; }
+table.rules tbody td:nth-child(2){ font-weight:600; width:30%; }
+
+.ex-box{ border-radius:var(--radius-md); padding:16px 18px; margin-bottom:14px; background:var(--level-tint); }
+.ex-label{ display:inline-block; font-family:'Poppins',sans-serif; font-size:calc(9.5px * var(--fs)); font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#fff; background:var(--level); padding:3px 11px; border-radius:12px; margin-bottom:9px; }
+.ex-de{ font-size:calc(14.5px * var(--fs)); font-weight:700; margin-bottom:3px; }
+.ex-en{ font-size:calc(11.8px * var(--fs)); color:var(--text-dim); }
+
+.note-box{ display:flex; gap:11px; border-radius:var(--radius-md); padding:13px 16px; font-size:calc(12px * var(--fs)); line-height:1.55; margin-bottom:12px; }
+.note-box .n-ic{ flex:0 0 auto; font-size:calc(16px * var(--fs)); }
+.note-box.tip{ background:rgba(234,179,8,.13); color:#8A6A05; }
+.note-box.tip b{ color:#8A6A05; }
+.note-box.warn{ background:rgba(234,88,12,.13); color:#A8410F; }
+.note-box.warn b{ color:#A8410F; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .note-box.tip{ color:#F4D35E; } :root:not([data-theme="light"]) .note-box.tip b{ color:#F9E29B; } :root:not([data-theme="light"]) .note-box.warn{ color:#FDA45C; } :root:not([data-theme="light"]) .note-box.warn b{ color:#FEC79A; } }
+:root[data-theme="dark"] .note-box.tip{ color:#F4D35E; } :root[data-theme="dark"] .note-box.tip b{ color:#F9E29B; }
+:root[data-theme="dark"] .note-box.warn{ color:#FDA45C; } :root[data-theme="dark"] .note-box.warn b{ color:#FEC79A; }
+
+.ex-list{ display:flex; flex-direction:column; gap:7px; margin-bottom:16px; }
+.ex-row{ display:flex; align-items:baseline; gap:11px; font-size:calc(12px * var(--fs)); padding:9px 13px; border-radius:9px; background:var(--surface-2); }
+.ex-row .num{ flex:0 0 auto; width:17px; height:17px; border-radius:5px; background:var(--level); color:#fff; font-size:calc(8.6px * var(--fs)); font-weight:700; display:flex; align-items:center; justify-content:center; }
+.ex-row .de{ font-weight:700; }
+.ex-row .en{ color:var(--text-dim); }
+.ex-row .arrow{ color:var(--text-faint); }
+
+.qc-box{ border:1.6px dashed var(--border); border-radius:var(--radius-md); padding:15px 17px; margin-bottom:8px; }
+.qc-head{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(11.5px * var(--fs)); letter-spacing:.4px; margin-bottom:10px; display:flex; align-items:center; gap:7px; }
+.qc-item{ border-radius:10px; padding:9px 11px; margin-bottom:4px; cursor:pointer; user-select:none; transition:background .15s; }
+.qc-item:hover{ background:var(--surface-2); }
+.qc-item:last-child{ margin-bottom:0; }
+.qc-q{ font-size:calc(12.2px * var(--fs)); display:flex; gap:8px; align-items:baseline; }
+.qc-q .qn{ flex:0 0 auto; width:17px; height:17px; border-radius:5px; background:var(--level-tint); color:var(--level-text); font-size:calc(9.5px * var(--fs)); font-weight:700; display:flex; align-items:center; justify-content:center; }
+.qc-hint{ margin-left:auto; font-size:calc(9.5px * var(--fs)); color:var(--text-faint); letter-spacing:.3px; }
+.qc-a{ font-size:calc(11.8px * var(--fs)); color:var(--level-text); margin:0 0 0 25px; max-height:0; opacity:0; overflow:hidden; transition:max-height .22s ease,opacity .18s ease,margin .22s ease; }
+.qc-item.open .qc-a{ max-height:80px; opacity:1; margin-top:6px; }
+.qc-item.open .qc-hint{ opacity:0; }
+
+.topic-foot{ margin-top:30px; padding-top:20px; border-top:1px solid var(--border-soft); }
+.complete-btn{
+  width:100%; display:flex; align-items:center; justify-content:center; gap:9px; padding:13px 18px;
+  border-radius:var(--radius-md); border:1.6px solid var(--level); background:transparent; color:var(--level-text);
+  font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(13px * var(--fs)); cursor:pointer; margin-bottom:16px; transition:background .15s,color .15s;
+}
+.complete-btn.done{ background:var(--level); color:#fff; }
+.complete-btn:hover{ background:var(--level-tint); }
+.complete-btn.done:hover{ background:var(--level); opacity:.92; }
+.nav-pair{ display:flex; gap:10px; }
+.nav-btn{
+  flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; padding:12px 14px; border-radius:var(--radius-md);
+  border:1px solid var(--border); background:var(--surface); text-decoration:none; cursor:pointer; color:var(--text);
+}
+.nav-btn:hover{ background:var(--surface-2); }
+.nav-btn.next{ text-align:right; align-items:flex-end; }
+.nav-btn .nb-lbl{ font-size:calc(9.5px * var(--fs)); letter-spacing:.8px; text-transform:uppercase; color:var(--text-faint); }
+.nav-btn .nb-name{ font-size:calc(12.4px * var(--fs)); font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:100%; }
+.nav-spacer{ flex:1; }
+
+/* generic empty state */
+.empty-state{ padding:60px 10px; text-align:center; color:var(--text-faint); }
+
+@media (max-width:860px){
+  .menu-btn{ display:flex; }
+  .sidebar{ position:fixed; left:0; top:0; height:100vh; transform:translateX(-100%); transition:transform .22s ease; box-shadow:var(--shadow-md); }
+  .sidebar.open{ transform:translateX(0); }
+  .backdrop.show{ display:block; }
+  .view{ padding:66px 18px 80px 18px; }
+  .dash-hero{ gap:18px; }
+  .dash-title{ font-size:calc(27px * var(--fs)); }
+}
+
+/* ============ FULL-WIDTH READABILITY + NEW CONTROLS ============ */
+.summary,.pin-box,.note-box{ max-width:72ch; }
+.side-toolbar{ display:flex; align-items:center; justify-content:space-between; padding:0 18px 12px 18px; }
+.tb-label{ font-size:calc(10.5px * var(--fs)); color:var(--text-faint); letter-spacing:.4px; text-transform:uppercase; }
+.fs-ctrl{ display:flex; align-items:center; gap:6px; }
+.fs-btn{
+  width:26px; height:26px; border-radius:8px; border:1px solid var(--border); background:var(--surface-2);
+  color:var(--text-dim); font-family:'Poppins',sans-serif; font-weight:700; font-size:11px; line-height:1;
+  cursor:pointer; display:flex; align-items:center; justify-content:center; padding:0;
+}
+.fs-btn:hover{ background:var(--bg-soft); color:var(--text); }
+.fs-val{ font-size:calc(10.5px * var(--fs)); color:var(--text-faint); min-width:34px; text-align:center; font-variant-numeric:tabular-nums; }
+.side-foot{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.reset-link{
+  background:none; border:none; padding:0; margin:0; color:var(--text-faint); font:inherit;
+  text-transform:none; letter-spacing:0; cursor:pointer; text-decoration:underline; text-underline-offset:2px; white-space:nowrap;
+}
+.reset-link:hover{ color:#C0392B; }
+@media (max-width:860px){ .side-toolbar{ padding:0 18px 12px 18px; } }
+
+/* ---------- sidebar vocabulary link ---------- */
+.vocab-link{ font-weight:600; margin-bottom:4px; padding-left:44px; }
+.vocab-link .tl-num{ color:var(--level); }
+.vocab-divider{ height:1px; background:var(--border-soft); margin:2px 10px 6px 44px; }
+
+/* ---------- level-card vocab button (dashboard) ---------- */
+.lc-vocab-btn{
+  display:flex; align-items:center; justify-content:center; gap:7px; width:100%; margin-top:10px;
+  padding:9px 10px; border-radius:10px; border:1px solid var(--border); background:var(--surface-2);
+  color:var(--text-dim); font-family:'Poppins',sans-serif; font-weight:600; font-size:calc(11.3px * var(--fs));
+  cursor:pointer;
+}
+.lc-vocab-btn:hover{ background:var(--level-tint); color:var(--level-text); border-color:transparent; }
+
+/* ============ VOCABULARY VIEW ============ */
+.vocab-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:18px; }
+.vocab-title{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(26px * var(--fs)); margin:0 0 4px 0; }
+.vocab-sub{ font-size:calc(12.6px * var(--fs)); color:var(--text-dim); }
+.vocab-stat-pill{
+  display:flex; align-items:center; gap:8px; background:var(--navy); color:#fff; border-radius:999px;
+  padding:8px 16px; font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(12px * var(--fs)); white-space:nowrap;
+}
+.vocab-stat-pill small{ color:var(--navy-text); font-weight:600; text-transform:uppercase; letter-spacing:.4px; font-size:calc(8.5px * var(--fs)); }
+
+.vocab-tabs{
+  display:flex; gap:4px; margin-bottom:22px; border-bottom:1.5px solid var(--border-soft);
+  overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+}
+.vocab-tabs::-webkit-scrollbar{ display:none; }
+.vocab-tab{
+  padding:10px 14px; border:none; background:none; cursor:pointer; color:var(--text-faint);
+  font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(12.5px * var(--fs)); border-bottom:2.5px solid transparent;
+  margin-bottom:-1.5px; display:flex; align-items:center; gap:6px; white-space:nowrap; flex:0 0 auto;
+}
+.vocab-tab:hover{ color:var(--text); }
+.vocab-tab.active{ color:var(--level); border-bottom-color:var(--level); }
+@media (max-width:420px){ .vocab-tab{ padding:9px 10px; font-size:calc(11.3px * var(--fs)); gap:4px; } }
+
+.vocab-cat-chips{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:22px; }
+.vocab-chip{
+  padding:6px 13px; border-radius:999px; border:1.4px solid var(--border); background:var(--surface);
+  color:var(--text-dim); font-size:calc(11.5px * var(--fs)); cursor:pointer; white-space:nowrap;
+}
+.vocab-chip:hover{ background:var(--surface-2); }
+.vocab-chip.active{ background:var(--level); border-color:var(--level); color:#fff; }
+
+.vocab-section{ margin-bottom:26px; }
+.vocab-section-head{ display:flex; align-items:center; gap:9px; margin-bottom:10px; }
+.vocab-section-ic{ width:28px; height:28px; border-radius:8px; background:var(--level-tint); color:var(--level-text); display:flex; align-items:center; justify-content:center; font-size:calc(14px * var(--fs)); flex:0 0 auto; }
+.vocab-section-name{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(13.5px * var(--fs)); }
+.vocab-section-count{ color:var(--text-faint); font-size:calc(11px * var(--fs)); }
+
+.vocab-row{
+  display:flex; align-items:flex-start; gap:12px; padding:11px 13px; border-radius:11px; background:var(--surface-2);
+  margin-bottom:6px;
+}
+.vocab-row .vw-main{ flex:1; min-width:0; }
+.vocab-row .vw-top{ display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; margin-bottom:3px; }
+.vocab-row .vw-de{ font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(13.2px * var(--fs)); }
+.vocab-row .vw-pos{ font-size:calc(9.5px * var(--fs)); color:var(--level-text); background:var(--level-tint); padding:1px 7px; border-radius:6px; font-weight:600; }
+.vocab-row .vw-en{ font-size:calc(12px * var(--fs)); color:var(--text-dim); }
+.vocab-row .vw-ex{ font-size:calc(11px * var(--fs)); color:var(--text-faint); line-height:1.5; }
+.vocab-row .vw-ex b{ color:var(--text-dim); font-weight:600; font-style:normal; }
+.vocab-row .vw-star{
+  flex:0 0 auto; width:30px; height:30px; border-radius:9px; border:1.4px solid var(--border); background:var(--surface);
+  color:var(--text-faint); cursor:pointer; font-size:calc(14px * var(--fs)); display:flex; align-items:center; justify-content:center;
+}
+.vocab-row .vw-star.known{ background:var(--level); border-color:var(--level); color:#fff; }
+.vocab-row .vw-star:hover{ border-color:var(--level); }
+
+/* ---------- flashcards ---------- */
+.fc-toolbar{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:20px; }
+.fc-select{
+  padding:8px 12px; border-radius:10px; border:1px solid var(--border); background:var(--surface);
+  color:var(--text); font-size:calc(12px * var(--fs)); font-family:inherit; flex:1 1 200px; min-width:0;
+}
+.fc-shuffle-btn{
+  display:flex; align-items:center; gap:6px; padding:8px 13px; border-radius:10px; border:1px solid var(--border);
+  background:var(--surface); color:var(--text-dim); font-size:calc(12px * var(--fs)); cursor:pointer; font-family:inherit;
+}
+.fc-shuffle-btn:hover{ background:var(--surface-2); }
+.fc-progress{ margin-left:auto; font-size:calc(12px * var(--fs)); color:var(--text-faint); font-variant-numeric:tabular-nums; }
+.fc-progress-bar{ height:5px; border-radius:5px; background:var(--ring-track); overflow:hidden; margin-bottom:26px; }
+.fc-progress-bar i{ display:block; height:100%; background:var(--level); border-radius:5px; transition:width .2s; }
+
+.fc-stage{ perspective:1400px; max-width:480px; margin:0 auto 20px auto; }
+.fc-card{ position:relative; width:100%; height:270px; cursor:pointer; }
+.fc-card-inner{ position:relative; width:100%; height:100%; transition:transform .45s cubic-bezier(.4,.2,.2,1); transform-style:preserve-3d; }
+.fc-card.flipped .fc-card-inner{ transform:rotateY(180deg); }
+.fc-face{
+  position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; border-radius:var(--radius-lg);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:26px;
+  background:var(--surface); border:1.4px solid var(--border); box-shadow:var(--shadow-md);
+}
+.fc-face.back{ transform:rotateY(180deg); background:var(--level-tint); }
+.fc-face .fc-pos{ font-size:calc(10.5px * var(--fs)); color:var(--level-text); background:rgba(var(--level-rgb),.12); padding:3px 10px; border-radius:999px; font-weight:700; margin-bottom:14px; text-transform:uppercase; letter-spacing:.5px; }
+.fc-face .fc-word{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(28px * var(--fs)); line-height:1.25; text-wrap:balance; }
+.fc-face .fc-en{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(24px * var(--fs)); color:var(--level-text); margin-bottom:14px; }
+.fc-face .fc-ex-de{ font-size:calc(12.6px * var(--fs)); font-style:italic; color:var(--text-dim); margin-bottom:4px; }
+.fc-face .fc-ex-en{ font-size:calc(11.4px * var(--fs)); color:var(--text-faint); }
+.fc-face .fc-hint{ position:absolute; bottom:14px; font-size:calc(10px * var(--fs)); color:var(--text-faint); letter-spacing:.3px; }
+.fc-face .fc-cat{ position:absolute; top:14px; font-size:calc(9.5px * var(--fs)); color:var(--text-faint); text-transform:uppercase; letter-spacing:.5px; }
+
+.fc-controls{ display:flex; align-items:center; justify-content:center; gap:10px; max-width:480px; margin:0 auto; flex-wrap:wrap; }
+.fc-nav-btn{
+  display:flex; align-items:center; gap:4px; padding:11px 16px; border-radius:999px; border:1px solid var(--border);
+  background:var(--surface); color:var(--text-dim); font-family:'Poppins',sans-serif; font-weight:600;
+  font-size:calc(12px * var(--fs)); cursor:pointer; white-space:nowrap; flex:0 0 auto; order:2;
+}
+.fc-nav-btn:hover{ background:var(--surface-2); }
+.fc-nav-btn:disabled{ opacity:.35; cursor:default; }
+.fc-mark-btn{
+  flex:1 1 130px; padding:12px 10px; border-radius:var(--radius-md); border:1.6px solid var(--border); background:var(--surface);
+  font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(12.3px * var(--fs)); cursor:pointer; color:var(--text-dim);
+  white-space:nowrap; order:1;
+}
+#fcPrevBtn{ order:0; }
+.fc-mark-btn.learning{ border-color:#EAB308; color:#8A6A05; }
+.fc-mark-btn.learning:hover{ background:rgba(234,179,8,.1); }
+.fc-mark-btn.know{ border-color:var(--level); color:var(--level-text); }
+.fc-mark-btn.know:hover{ background:var(--level-tint); }
+
+.fc-done{ text-align:center; padding:50px 20px; max-width:420px; margin:0 auto; }
+.fc-done .fd-ic{ font-size:calc(40px * var(--fs)); margin-bottom:14px; }
+.fc-done h3{ font-family:'Poppins',sans-serif; font-size:calc(19px * var(--fs)); margin:0 0 8px 0; }
+.fc-done p{ font-size:calc(12.8px * var(--fs)); color:var(--text-dim); margin:0 0 20px 0; }
+.fc-done-actions{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.fc-btn-primary{
+  padding:11px 20px; border-radius:var(--radius-md); border:none; background:var(--level); color:#fff;
+  font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(12.5px * var(--fs)); cursor:pointer;
+}
+.fc-btn-secondary{
+  padding:11px 20px; border-radius:var(--radius-md); border:1.4px solid var(--border); background:var(--surface);
+  color:var(--text-dim); font-family:'Poppins',sans-serif; font-weight:700; font-size:calc(12.5px * var(--fs)); cursor:pointer;
+}
+
+/* ---------- quiz ---------- */
+.quiz-wrap{ max-width:560px; margin:0 auto; }
+.quiz-top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; font-size:calc(11.5px * var(--fs)); color:var(--text-faint); }
+.quiz-score{ font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
+.quiz-q-card{
+  background:var(--surface); border:1.4px solid var(--border); border-radius:var(--radius-lg); padding:30px 26px;
+  text-align:center; margin-bottom:18px;
+}
+.quiz-q-eyebrow{ font-size:calc(10.5px * var(--fs)); letter-spacing:1.5px; text-transform:uppercase; color:var(--text-faint); margin-bottom:10px; }
+.quiz-q-word{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(27px * var(--fs)); text-wrap:balance; }
+.quiz-options{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px; }
+.quiz-option{
+  padding:13px 14px; border-radius:var(--radius-md); border:1.6px solid var(--border); background:var(--surface);
+  color:var(--text); font-size:calc(12.8px * var(--fs)); cursor:pointer; text-align:left; font-family:inherit;
+}
+.quiz-option:hover:not(:disabled){ border-color:var(--level); background:var(--level-tint); }
+.quiz-option:disabled{ cursor:default; }
+.quiz-option.correct{ border-color:var(--level); background:var(--level-tint); color:var(--level-text); font-weight:700; }
+.quiz-option.wrong{ border-color:#DC2626; background:rgba(220,38,38,.1); color:#B91C1C; font-weight:700; }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .quiz-option.wrong{ color:#FCA5A5; } }
+:root[data-theme="dark"] .quiz-option.wrong{ color:#FCA5A5; }
+@media (max-width:560px){ .quiz-options{ grid-template-columns:1fr; } }
+.quiz-next-wrap{ text-align:center; }
+.quiz-result{ text-align:center; padding:40px 20px; }
+.quiz-result .qr-score{ font-family:'Poppins',sans-serif; font-weight:800; font-size:calc(44px * var(--fs)); color:var(--level); }
+.quiz-result .qr-label{ font-size:calc(12.5px * var(--fs)); color:var(--text-faint); margin-bottom:20px; }
+.quiz-result .qr-msg{ font-size:calc(13.5px * var(--fs)); color:var(--text-dim); margin-bottom:22px; }
+</style>
+
+<div id="app">
+  <button id="menuBtn" class="menu-btn" aria-label="Open menu">&#9776;</button>
+  <div id="backdrop" class="backdrop"></div>
+  <aside id="sidebar" class="sidebar">
+    <div class="side-head">
+      <div class="brand">
+        <div class="brand-badge">DE</div>
+        <div>
+          <div class="brand-title">Deutsch</div>
+          <div class="brand-sub">A1 &rarr; B2 course</div>
+        </div>
+      </div>
+      <button id="themeBtn" class="icon-btn" title="Toggle theme">&#9680;</button>
+    </div>
+    <div class="side-toolbar">
+      <span class="tb-label">Text size</span>
+      <div class="fs-ctrl">
+        <button id="fsDown" class="fs-btn" type="button" title="Smaller text" aria-label="Decrease text size">A&minus;</button>
+        <span id="fsVal" class="fs-val">100%</span>
+        <button id="fsUp" class="fs-btn" type="button" title="Larger text" aria-label="Increase text size">A+</button>
+      </div>
+    </div>
+    <div class="side-search">
+      <input id="searchInput" type="search" placeholder="Search 60 topics&hellip;" autocomplete="off">
+    </div>
+    <nav id="sideNav" class="side-nav"></nav>
+    <div class="side-foot" id="sideFoot">
+      <span>60 topics &middot; 4 levels</span>
+      <button id="resetBtn" class="reset-link" type="button">Reset progress</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div id="view" class="view">
+      <div class="empty-state">Loading course&hellip;</div>
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var COURSE = null;               // {levels:[...]}
+var TOPIC_INDEX = {};            // key "A1-3" -> {topic, level}
+var LEVEL_MAP = {};              // "A1" -> level obj
+var FLAT = [];                   // ordered list of {key, level, topic}
+var progress = { completed:{} };
+var openGroups = {};             // level code -> bool
+var currentKey = null;
+var VOCAB = {};                  // "A1" -> {categories:[...], count}
+var vocabStatus = {};            // "A1" -> {"Hallo":"known"|"learning"}
+var vocabState = { level:null, tab:'browse', cat:'all', order:[], idx:0, quiz:null };
+
+var ICONS = { home:'&#127968;', check:'&#10003;' };
+
+/* ---------------- text size control ---------------- */
+var FS_MIN = 0.9, FS_MAX = 1.4, FS_STEP = 0.1;
+function currentFs(){
+  var v = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--fs'));
+  return isNaN(v) ? 1 : v;
+}
+function applyFs(v){
+  v = Math.min(FS_MAX, Math.max(FS_MIN, Math.round(v*100)/100));
+  document.documentElement.style.setProperty('--fs', v);
+  var el = document.getElementById('fsVal');
+  if (el) el.textContent = Math.round(v*100) + '%';
+  try{ localStorage.setItem('deutsch-fontscale', String(v)); }catch(e){}
+}
+function initFontScale(){
+  var v = 1;
+  try{ var raw = localStorage.getItem('deutsch-fontscale'); if (raw) v = parseFloat(raw) || 1; }catch(e){}
+  applyFs(v);
+  document.getElementById('fsDown').addEventListener('click', function(){ applyFs(currentFs() - FS_STEP); });
+  document.getElementById('fsUp').addEventListener('click', function(){ applyFs(currentFs() + FS_STEP); });
+}
+initFontScale();
+
+/* ---------------- reset progress ---------------- */
+function totalVocabStatusCount(){
+  var n = 0;
+  Object.keys(vocabStatus).forEach(function(lv){ n += Object.keys(vocabStatus[lv]).length; });
+  return n;
+}
+function resetProgress(){
+  var topicsDone = totalDoneCount();
+  var vocabMarked = totalVocabStatusCount();
+  if (!topicsDone && !vocabMarked) return;
+  var parts = [];
+  if (topicsDone) parts.push(topicsDone + ' completed topic' + (topicsDone===1?'':'s'));
+  if (vocabMarked) parts.push(vocabMarked + ' marked word' + (vocabMarked===1?'':'s'));
+  var ok = window.confirm('Reset all progress? This clears ' + parts.join(' and ') + ' \u2014 it can\'t be undone.');
+  if (!ok) return;
+  progress.completed = {};
+  vocabStatus = {};
+  persistProgress();
+  saveVocabStatus();
+  refreshProgressUI();
+}
+document.getElementById('resetBtn').addEventListener('click', resetProgress);
+
+
+function key(levelCode, unit){ return levelCode + '-' + unit; }
+
+/* ---------------- data load ---------------- */
+fetch('course_data.json').then(function(r){ return r.json(); }).then(function(data){
+  COURSE = data;
+  VOCAB = data.vocabulary || {};
+  loadVocabStatus();
+  data.levels.forEach(function(lv){
+    LEVEL_MAP[lv.code] = lv;
+    lv.topics.forEach(function(t){
+      var k = key(lv.code, t.unit);
+      TOPIC_INDEX[k] = { topic:t, level:lv };
+      FLAT.push({ key:k, level:lv, topic:t });
+    });
+  });
+  openGroups[FLAT.length ? FLAT[0].level.code : 'A1'] = true;
+  initTheme();
+  initProgress().then(function(){
+    buildSidebar();
+    window.addEventListener('hashchange', route);
+    route();
+  });
+}).catch(function(err){
+  document.getElementById('view').innerHTML = '<div class="empty-state">Could not load course data.<br><small>' + String(err) + '</small></div>';
+});
+
+/* ---------------- theme ---------------- */
+function initTheme(){
+  var saved = null;
+  try{ saved = localStorage.getItem('deutsch-theme'); }catch(e){}
+  if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var next = cur === 'dark' ? 'light' : (cur === 'light' ? null : 'dark');
+    if (next) document.documentElement.setAttribute('data-theme', next);
+    else document.documentElement.removeAttribute('data-theme');
+    try{ localStorage.setItem('deutsch-theme', next || ''); }catch(e){}
+  });
+}
+
+/* ---------------- progress (kept in this browser only, via localStorage) ---------------- */
+function initProgress(){
+  loadLocalProgress();
+  return Promise.resolve();
+}
+function loadLocalProgress(){
+  try{
+    var raw = localStorage.getItem('deutsch-progress');
+    if (raw) progress.completed = JSON.parse(raw) || {};
+  }catch(e){}
+}
+function persistProgress(){
+  try{ localStorage.setItem('deutsch-progress', JSON.stringify(progress.completed)); }catch(e){}
+}
+function toggleComplete(k){
+  if (progress.completed[k]) delete progress.completed[k];
+  else progress.completed[k] = true;
+  persistProgress();
+  refreshProgressUI();
+}
+function levelDoneCount(levelCode){
+  var n = 0;
+  (LEVEL_MAP[levelCode].topics || []).forEach(function(t){ if (progress.completed[key(levelCode,t.unit)]) n++; });
+  return n;
+}
+function totalDoneCount(){ return Object.keys(progress.completed).length; }
+
+/* ---------------- vocabulary mastery (localStorage only) ---------------- */
+function loadVocabStatus(){
+  try{
+    var raw = localStorage.getItem('deutsch-vocab-status');
+    if (raw) vocabStatus = JSON.parse(raw) || {};
+  }catch(e){}
+}
+function saveVocabStatus(){
+  try{ localStorage.setItem('deutsch-vocab-status', JSON.stringify(vocabStatus)); }catch(e){}
+}
+function getVocabStatus(level, de){
+  return (vocabStatus[level] && vocabStatus[level][de]) || null;
+}
+function setVocabStatus(level, de, status){
+  if (!vocabStatus[level]) vocabStatus[level] = {};
+  if (status) vocabStatus[level][de] = status; else delete vocabStatus[level][de];
+  saveVocabStatus();
+  var pill = document.querySelector('.vocab-stat-pill');
+  if (pill && vocabState.level === level && VOCAB[level]){
+    pill.innerHTML = '&#11088; ' + vocabKnownCount(level) + ' / ' + VOCAB[level].count + ' known';
+  }
+}
+function vocabKnownCount(level){
+  var m = vocabStatus[level];
+  if (!m) return 0;
+  var n = 0;
+  for (var k in m){ if (m[k] === 'known') n++; }
+  return n;
+}
+function shuffleArray(arr){
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+function escAttr(s){
+  return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function refreshProgressUI(){
+  buildSidebar();
+  if (currentKey === '__dashboard__') renderDashboard();
+  else if (currentKey && currentKey.indexOf('vocab/') === 0) renderVocab(currentKey.slice(6), vocabState.tab);
+  else if (currentKey) renderTopic(currentKey, true);
+}
+
+/* ---------------- router ---------------- */
+function route(){
+  var h = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
+  closeSidebarMobile();
+  if (!h || h === 'dashboard'){ currentKey = '__dashboard__'; renderDashboard(); }
+  else if (h.indexOf('vocab/') === 0){
+    var parts = h.split('/');
+    var lvCode = parts[1], tab = parts[2] || 'browse';
+    if (LEVEL_MAP[lvCode] && VOCAB[lvCode]){ currentKey = 'vocab/' + lvCode; renderVocab(lvCode, tab); }
+    else { currentKey = '__dashboard__'; renderDashboard(); }
+  }
+  else if (TOPIC_INDEX[h]){ currentKey = h; renderTopic(h); }
+  else { currentKey = '__dashboard__'; renderDashboard(); }
+  document.getElementById('view').scrollTop = 0;
+  window.scrollTo(0,0);
+  highlightActiveLink();
+}
+function go(h){ location.hash = '#/' + h; }
+
+/* ---------------- sidebar ---------------- */
+function buildSidebar(){
+  var nav = document.getElementById('sideNav');
+  nav.innerHTML = '';
+
+  var home = document.createElement('a');
+  home.className = 'topic-link';
+  home.style.paddingLeft = '10px';
+  home.style.marginBottom = '6px';
+  home.href = '#/dashboard';
+  home.innerHTML = '<span class="tl-num">' + ICONS.home + '</span><span class="tl-title" style="font-weight:700;">Dashboard</span>';
+  nav.appendChild(home);
+
+  COURSE.levels.forEach(function(lv){
+    var done = levelDoneCount(lv.code);
+    var group = document.createElement('div');
+    group.className = 'level-group' + (openGroups[lv.code] ? ' open' : '');
+    group.setAttribute('data-level', lv.code);
+
+    var head = document.createElement('button');
+    head.className = 'level-group-head';
+    head.innerHTML =
+      '<span class="lg-code">' + lv.code + '</span>' +
+      '<span class="lg-name"><span class="n1">Level ' + lv.code + '</span><span class="n2">' + lv.name + '</span></span>' +
+      '<span class="lg-frac">' + done + '/' + lv.topics.length + '</span>' +
+      '<span class="lg-chev">&#9656;</span>';
+    head.addEventListener('click', function(){
+      openGroups[lv.code] = !openGroups[lv.code];
+      buildSidebar();
+    });
+    group.appendChild(head);
+
+    var bar = document.createElement('div');
+    bar.className = 'level-group-bar';
+    bar.innerHTML = '<i style="width:' + (done / lv.topics.length * 100) + '%"></i>';
+    group.appendChild(bar);
+
+    var list = document.createElement('div');
+    list.className = 'level-topics';
+    if (VOCAB[lv.code]){
+      var vocabA = document.createElement('a');
+      vocabA.className = 'topic-link vocab-link';
+      vocabA.href = '#/vocab/' + lv.code;
+      vocabA.setAttribute('data-key', 'vocab/' + lv.code);
+      vocabA.innerHTML = '<span class="tl-num">&#128218;</span><span class="tl-title">Vocabulary &middot; ' + VOCAB[lv.code].count + '</span>';
+      list.appendChild(vocabA);
+      var vocabDiv = document.createElement('div');
+      vocabDiv.className = 'vocab-divider';
+      list.appendChild(vocabDiv);
+    }
+    lv.topics.forEach(function(t){
+      var k = key(lv.code, t.unit);
+      var a = document.createElement('a');
+      a.className = 'topic-link';
+      a.href = '#/' + k;
+      a.setAttribute('data-key', k);
+      var doneCls = progress.completed[k] ? ' done' : '';
+      a.innerHTML =
+        '<span class="tl-num">' + String(t.unit).padStart(2,'0') + '</span>' +
+        '<span class="tl-title">' + t.title_en + '</span>' +
+        '<span class="tl-check' + doneCls + '">&#10003;</span>';
+      list.appendChild(a);
+    });
+    group.appendChild(list);
+    nav.appendChild(group);
+  });
+
+  highlightActiveLink();
+}
+
+function highlightActiveLink(){
+  document.querySelectorAll('#sideNav .topic-link').forEach(function(el){
+    el.classList.toggle('active', el.getAttribute('data-key') === currentKey);
+  });
+}
+
+/* ---------------- search ---------------- */
+var searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', function(){
+  var q = searchInput.value.trim().toLowerCase();
+  var nav = document.getElementById('sideNav');
+  if (!q){ buildSidebar(); return; }
+  var matches = FLAT.filter(function(item){
+    var t = item.topic;
+    var hay = (t.title_de + ' ' + t.title_en + ' ' + t.tag).toLowerCase();
+    return hay.indexOf(q) !== -1;
+  });
+  nav.innerHTML = '';
+  var wrap = document.createElement('div');
+  wrap.className = 'search-results';
+  if (!matches.length){
+    wrap.innerHTML = '<div class="search-empty">No topics match &ldquo;' + searchInput.value + '&rdquo;</div>';
+  } else {
+    wrap.innerHTML = '<div class="sr-head">' + matches.length + ' result' + (matches.length===1?'':'s') + '</div>';
+    matches.forEach(function(item){
+      var a = document.createElement('a');
+      a.className = 'topic-link';
+      a.setAttribute('data-level', item.level.code);
+      a.href = '#/' + item.key;
+      a.setAttribute('data-key', item.key);
+      var doneCls = progress.completed[item.key] ? ' done' : '';
+      a.innerHTML =
+        '<span class="tl-lv">' + item.level.code + '</span>' +
+        '<span class="tl-title">' + item.topic.title_en + '</span>' +
+        '<span class="tl-check' + doneCls + '">&#10003;</span>';
+      wrap.appendChild(a);
+    });
+  }
+  nav.appendChild(wrap);
+  highlightActiveLink();
+});
+
+/* ---------------- mobile drawer ---------------- */
+var sidebarEl = document.getElementById('sidebar');
+var backdropEl = document.getElementById('backdrop');
+var menuBtnEl = document.getElementById('menuBtn');
+menuBtnEl.addEventListener('click', function(){
+  sidebarEl.classList.add('open'); backdropEl.classList.add('show'); menuBtnEl.classList.add('hidden');
+});
+backdropEl.addEventListener('click', closeSidebarMobile);
+function closeSidebarMobile(){ sidebarEl.classList.remove('open'); backdropEl.classList.remove('show'); menuBtnEl.classList.remove('hidden'); }
+
+/* ---------------- render: dashboard ---------------- */
+function renderDashboard(){
+  var total = FLAT.length;
+  var done = totalDoneCount();
+  var pct = total ? Math.round(done/total*100) : 0;
+
+  var lastKey = null, lastTs = -1;
+  Object.keys(progress.completed || {}).forEach(function(k){});
+  // "continue" = first not-yet-completed topic in level order
+  var nextUp = FLAT.find(function(f){ return !progress.completed[f.key]; });
+
+  var html = '';
+  html += '<div class="dash-hero">';
+  html += '  <div class="dash-hero-text">';
+  html += '    <div class="dash-kicker">Complete self-study course</div>';
+  html += '    <h1 class="dash-title">Deutsch <span class="accent">von A1 bis B2</span></h1>';
+  html += '    <div class="dash-sub">Every grammar rule, verb table and vocabulary set from absolute beginner to upper-intermediate &mdash; with interactive quick-checks and progress tracking built in.</div>';
+  html += '  </div>';
+  html += '  <div class="ring-wrap"><div class="ring" style="--pct:' + pct + '"><div class="ring-inner"><div class="rv">' + pct + '%</div><div class="rl">complete</div></div></div></div>';
+  html += '</div>';
+
+  if (nextUp){
+    var isStart = done === 0;
+    html += '<div class="continue-card" id="continueCard">';
+    html += '  <div class="cc-ic">' + nextUp.topic.icon + '</div>';
+    html += '  <div class="cc-mid"><div class="cc-lbl">' + (isStart ? 'Start here' : 'Continue &middot; Level ' + nextUp.level.code + ' &middot; Unit ' + String(nextUp.topic.unit).padStart(2,'0')) + '</div><div class="cc-name">' + nextUp.topic.title_en + '</div></div>';
+  } else {
+    html += '<div class="continue-card" id="continueCard">';
+    html += '  <div class="cc-ic">&#127942;</div>';
+    html += '  <div class="cc-mid"><div class="cc-lbl">All 60 topics complete</div><div class="cc-name">Review any unit any time</div></div>';
+  }
+  html += '  <div class="cc-go">&rarr;</div>';
+  html += '</div>';
+
+  html += '<div class="section-label">Levels</div>';
+  html += '<div class="level-cards">';
+  COURSE.levels.forEach(function(lv){
+    var d = levelDoneCount(lv.code);
+    var p = Math.round(d/lv.topics.length*100);
+    html += '<div class="level-card" data-level="' + lv.code + '" data-goto-level="' + lv.code + '">';
+    html += '  <div class="lc-top"><span class="lc-code">' + lv.code + '</span><span class="lc-name">' + lv.name + '</span></div>';
+    html += '  <div class="lc-desc">' + lv.desc + '</div>';
+    html += '  <div class="lc-bar"><i style="width:' + p + '%"></i></div>';
+    html += '  <div class="lc-foot"><span>' + d + ' / ' + lv.topics.length + ' topics</span><span>' + p + '%</span></div>';
+    if (VOCAB[lv.code]){
+      html += '  <button type="button" class="lc-vocab-btn" data-vocab-level="' + lv.code + '">&#128218; ' + VOCAB[lv.code].count + ' words &middot; Flashcards</button>';
+    }
+    html += '</div>';
+  });
+  html += '</div>';
+
+  var exampleCount = FLAT.reduce(function(acc,f){ return acc + (f.topic.extra_examples ? f.topic.extra_examples.length : 0) + (f.topic.example_main?1:0); }, 0);
+  var vocabTotal = Object.keys(VOCAB).reduce(function(acc,code){ return acc + (VOCAB[code].count||0); }, 0);
+  html += '<div class="section-label">At a glance</div>';
+  html += '<div class="stat-strip">';
+  html += '  <div class="stat-tile"><div class="sv">' + total + '</div><div class="sl">TOPICS</div></div>';
+  html += '  <div class="stat-tile"><div class="sv">' + done + '</div><div class="sl">COMPLETED</div></div>';
+  html += '  <div class="stat-tile"><div class="sv">' + exampleCount + '+</div><div class="sl">EXAMPLES</div></div>';
+  html += '  <div class="stat-tile"><div class="sv">' + vocabTotal + '</div><div class="sl">VOCAB WORDS</div></div>';
+  html += '</div>';
+
+  var view = document.getElementById('view');
+  view.removeAttribute('data-level');
+  view.innerHTML = html;
+
+  var cc = document.getElementById('continueCard');
+  if (cc) cc.addEventListener('click', function(){ if (nextUp) go(nextUp.key); });
+  view.querySelectorAll('.level-card').forEach(function(el){
+    el.addEventListener('click', function(){
+      var lc = el.getAttribute('data-goto-level');
+      openGroups = {}; openGroups[lc] = true;
+      buildSidebar();
+      var firstIncomplete = LEVEL_MAP[lc].topics.find(function(t){ return !progress.completed[key(lc,t.unit)]; }) || LEVEL_MAP[lc].topics[0];
+      go(key(lc, firstIncomplete.unit));
+    });
+  });
+}
+
+/* ---------------- render: topic ---------------- */
+function cardGrid(cards){
+  if (!cards || !cards.length) return '';
+  var out = cards.map(function(cd){
+    return '<div class="card"><div class="c-icon">' + cd.icon + '</div><div class="c-de">' + cd.de + '</div><div class="c-en">' + cd.en + '</div><div class="c-desc">' + cd.desc + '</div></div>';
+  }).join('');
+  return '<div class="card-grid">' + out + '</div>';
+}
+function pinBox(text, lead){
+  if (!text) return '';
+  return '<div class="pin-box"><div class="pin-ic">&#128204;</div><div><b>' + (lead||'Key idea') + ':</b> ' + text + '</div></div>';
+}
+function statBar(stats){
+  if (!stats || !stats.length) return '';
+  var boxes = stats.map(function(s){ return '<div class="stat-box"><div class="val">' + s[0] + '</div><div class="lbl">' + s[1] + '</div></div>'; }).join('');
+  return '<div class="stat-bar">' + boxes + '</div>';
+}
+function tablePanel(t){
+  if (!t.table_rows) return '';
+  var wide = t.table_wide_first !== false;
+  var ths = t.table_cols.map(function(c,i){ return '<th' + (i===0 && wide ? ' class="num"':'') + '>' + c + '</th>'; }).join('');
+  var trs = t.table_rows.map(function(r){
+    var tds = r.map(function(cell,i){
+      var cls = (i===0 && wide) ? 'num' : (i===1 ? 'de' : '');
+      return '<td class="' + cls + '">' + cell + '</td>';
+    }).join('');
+    return '<tr>' + tds + '</tr>';
+  }).join('');
+  var count = t.table_count || (t.table_rows.length + ' items');
+  return '<div class="panel"><div class="panel-head"><div class="p-icon">' + (t.table_icon||t.icon) + '</div><div><div class="p-title">' + t.table_title + '</div><div class="p-sub">' + (t.table_sub||'') + '</div></div><div class="p-count">' + count + '</div></div><div class="tbl-wrap"><table class="data"><thead><tr>' + ths + '</tr></thead><tbody>' + trs + '</tbody></table></div></div>';
+}
+function rulesTable(t){
+  if (!t.rules_table) return '';
+  var rt = t.rules_table;
+  var ths = rt.cols.map(function(c){ return '<th>' + c + '</th>'; }).join('');
+  var trs = rt.rows.map(function(r){ return '<tr>' + r.map(function(c){ return '<td>' + c + '</td>'; }).join('') + '</tr>'; }).join('');
+  return '<div class="panel"><div class="panel-head"><div class="p-icon">' + (rt.icon||t.icon) + '</div><div><div class="p-title">' + rt.title + '</div><div class="p-sub">' + (rt.sub||'') + '</div></div></div><div class="tbl-wrap"><table class="rules"><thead><tr>' + ths + '</tr></thead><tbody>' + trs + '</tbody></table></div></div>';
+}
+function exampleBox(em){
+  if (!em) return '';
+  return '<div class="ex-box"><span class="ex-label">Example</span><div class="ex-de">' + em.de + '</div><div class="ex-en">' + em.en + '</div></div>';
+}
+function extraExamples(items){
+  if (!items || !items.length) return '';
+  var rows = items.map(function(it,i){
+    return '<div class="ex-row"><div class="num">' + (i+1) + '</div><div class="de">' + it.de + '</div><div class="arrow">&rarr;</div><div class="en">' + it.en + '</div></div>';
+  }).join('');
+  return '<div class="ex-list">' + rows + '</div>';
+}
+function noteBox(kind, icon, lead, text){
+  if (!text) return '';
+  return '<div class="note-box ' + kind + '"><div class="n-ic">' + icon + '</div><div><b>' + lead + ':</b> ' + text + '</div></div>';
+}
+function quickCheck(items){
+  if (!items || !items.length) return '';
+  var rows = items.map(function(it,i){
+    return '<div class="qc-item"><div class="qc-q"><span class="qn">' + (i+1) + '</span><span>' + it.q + '</span><span class="qc-hint">tap to reveal</span></div><div class="qc-a">' + it.a + '</div></div>';
+  }).join('');
+  return '<div class="qc-box"><div class="qc-head">&#10067; Quick check &mdash; test yourself</div>' + rows + '</div>';
+}
+
+/* ---------------- vocabulary views ---------------- */
+function renderVocab(level, tab){
+  var lv = LEVEL_MAP[level];
+  var vocabData = VOCAB[level];
+  if (!lv || !vocabData){ currentKey = '__dashboard__'; return renderDashboard(); }
+  tab = (tab === 'cards' || tab === 'quiz') ? tab : 'browse';
+  if (vocabState.level !== level){
+    vocabState.cat = 'all';
+    vocabState.cardCat = 'all';
+    vocabState._poolKey = null;
+    vocabState.quiz = null;
+  }
+  vocabState.level = level;
+  vocabState.tab = tab;
+
+  var known = vocabKnownCount(level);
+  var total = vocabData.count;
+
+  var html = '';
+  html += '<div class="crumb"><a href="#/dashboard">Dashboard</a><span class="sep">/</span><a href="#/dashboard">Level ' + level + '</a><span class="sep">/</span><span class="cur">Vocabulary</span></div>';
+  html += '<div class="vocab-head">';
+  html += '  <div class="eyebrow">German Course <span class="dot">&bull;</span> Level ' + level + ' <span class="dot">&bull;</span> Vocabulary</div>';
+  html += '  <h1 class="vocab-title">' + lv.name + ' Vocabulary</h1>';
+  html += '  <p class="vocab-sub">' + total + ' essential words and phrases, organized by topic.</p>';
+  html += '  <div class="vocab-stat-pill">&#11088; ' + known + ' / ' + total + ' known</div>';
+  html += '</div>';
+  html += '<div class="vocab-tabs">';
+  html += '  <a href="#/vocab/' + level + '/browse" class="vocab-tab' + (tab==='browse'?' active':'') + '">&#128214; Browse</a>';
+  html += '  <a href="#/vocab/' + level + '/cards" class="vocab-tab' + (tab==='cards'?' active':'') + '">&#127183; Flashcards</a>';
+  html += '  <a href="#/vocab/' + level + '/quiz" class="vocab-tab' + (tab==='quiz'?' active':'') + '">&#9999;&#65039; Practice Quiz</a>';
+  html += '</div>';
+  html += '<div id="vocabBody"></div>';
+
+  var view = document.getElementById('view');
+  view.setAttribute('data-level', level);
+  view.innerHTML = html;
+
+  if (tab === 'browse') renderVocabBrowse(level);
+  else if (tab === 'cards') renderVocabCards(level);
+  else renderVocabQuiz(level);
+}
+
+function renderVocabBrowse(level){
+  var vocabData = VOCAB[level];
+  var cats = vocabData.categories;
+  var activeCat = vocabState.cat || 'all';
+
+  var chips = '<div class="vocab-cat-chips">';
+  chips += '<button type="button" class="vocab-chip' + (activeCat==='all'?' active':'') + '" data-cat="all">All &middot; ' + vocabData.count + '</button>';
+  cats.forEach(function(cat){
+    chips += '<button type="button" class="vocab-chip' + (activeCat===cat.name?' active':'') + '" data-cat="' + escAttr(cat.name) + '">' + cat.icon + ' ' + cat.name + ' &middot; ' + cat.words.length + '</button>';
+  });
+  chips += '</div>';
+
+  var sectionsHtml = '';
+  cats.forEach(function(cat){
+    if (activeCat !== 'all' && activeCat !== cat.name) return;
+    var rows = cat.words.map(function(w){
+      var st = getVocabStatus(level, w.de);
+      return '<div class="vocab-row">' +
+        '<div class="vw-main">' +
+          '<div class="vw-top"><span class="vw-de">' + w.de + '</span><span class="vw-pos">' + w.pos + '</span></div>' +
+          '<div class="vw-en">' + w.en + '</div>' +
+          '<div class="vw-ex"><b>' + w.ex_de + '</b> &mdash; ' + w.ex_en + '</div>' +
+        '</div>' +
+        '<button type="button" class="vw-star' + (st==='known'?' known':'') + '" data-word="' + escAttr(w.de) + '" title="Mark as known">&#9733;</button>' +
+      '</div>';
+    }).join('');
+    sectionsHtml += '<div class="vocab-section">' +
+      '<div class="vocab-section-head"><span class="vocab-section-ic">' + cat.icon + '</span><span class="vocab-section-name">' + cat.name + '</span><span class="vocab-section-count">' + cat.words.length + ' words</span></div>' +
+      rows +
+    '</div>';
+  });
+
+  var body = document.getElementById('vocabBody');
+  body.innerHTML = chips + sectionsHtml;
+
+  body.querySelectorAll('.vocab-chip').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      vocabState.cat = btn.getAttribute('data-cat');
+      renderVocabBrowse(level);
+    });
+  });
+  body.querySelectorAll('.vw-star').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var w = btn.getAttribute('data-word');
+      var cur = getVocabStatus(level, w);
+      setVocabStatus(level, w, cur === 'known' ? null : 'known');
+      renderVocabBrowse(level);
+    });
+  });
+}
+
+function buildCardPool(level, cat){
+  var vocabData = VOCAB[level];
+  var pool = [];
+  vocabData.categories.forEach(function(c){
+    if (cat !== 'all' && cat !== c.name) return;
+    c.words.forEach(function(w){
+      pool.push({ de:w.de, pos:w.pos, en:w.en, ex_de:w.ex_de, ex_en:w.ex_en, cat:c.name, icon:c.icon });
+    });
+  });
+  return pool;
+}
+
+function renderVocabCards(level){
+  var vocabData = VOCAB[level];
+  var cats = vocabData.categories;
+  var cat = vocabState.cardCat || 'all';
+  var pool = buildCardPool(level, cat);
+  var poolKey = level + '|' + cat;
+
+  if (vocabState._poolKey !== poolKey){
+    vocabState.order = pool.map(function(_, i){ return i; });
+    vocabState.idx = 0;
+    vocabState.flipped = false;
+    vocabState._poolKey = poolKey;
+    vocabState.deckDone = false;
+  }
+  if (vocabState.idx >= vocabState.order.length) vocabState.idx = Math.max(0, vocabState.order.length - 1);
+
+  var catOptions = '<option value="all"' + (cat==='all'?' selected':'') + '>All categories &middot; ' + vocabData.count + '</option>';
+  cats.forEach(function(c){
+    catOptions += '<option value="' + escAttr(c.name) + '"' + (cat===c.name?' selected':'') + '>' + c.name + ' &middot; ' + c.words.length + '</option>';
+  });
+
+  var body = document.getElementById('vocabBody');
+  var toolbarHtml = '<div class="fc-toolbar"><select class="fc-select" id="fcCatSelect">' + catOptions + '</select><button type="button" class="fc-shuffle-btn" id="fcShuffleBtn">&#128256; Shuffle</button></div>';
+
+  if (!pool.length){
+    body.innerHTML = toolbarHtml + '<p class="vocab-sub">No words in this category yet.</p>';
+    body.querySelector('#fcCatSelect').addEventListener('change', function(e){ vocabState.cardCat = e.target.value; renderVocabCards(level); });
+    return;
+  }
+
+  if (vocabState.deckDone){ renderVocabDeckDone(level, cat, toolbarHtml); return; }
+
+  var w = pool[vocabState.order[vocabState.idx]];
+  var pct = Math.round((vocabState.idx / vocabState.order.length) * 100);
+
+  var html = toolbarHtml;
+  html += '<div class="fc-progress"><span>' + (vocabState.idx+1) + ' / ' + vocabState.order.length + '</span><div class="fc-progress-bar"><i style="width:' + pct + '%"></i></div></div>';
+  html += '<div class="fc-stage"><div class="fc-card' + (vocabState.flipped?' flipped':'') + '" id="fcCard"><div class="fc-card-inner">';
+  html += '  <div class="fc-face front"><span class="fc-cat">' + w.icon + ' ' + w.cat + '</span><span class="fc-pos">' + w.pos + '</span><div class="fc-word">' + w.de + '</div><div class="fc-hint">Tap to reveal</div></div>';
+  html += '  <div class="fc-face back"><span class="fc-cat">' + w.icon + ' ' + w.cat + '</span><div class="fc-en">' + w.en + '</div><div class="fc-ex-de">' + w.ex_de + '</div><div class="fc-ex-en">' + w.ex_en + '</div></div>';
+  html += '</div></div></div>';
+  html += '<div class="fc-controls">';
+  html += '  <button type="button" class="fc-nav-btn" id="fcPrevBtn"' + (vocabState.idx===0?' disabled':'') + '>&larr; Prev</button>';
+  html += '  <button type="button" class="fc-mark-btn learning" id="fcLearningBtn">Still learning</button>';
+  html += '  <button type="button" class="fc-mark-btn know" id="fcKnowBtn">&#10003; I know this</button>';
+  html += '  <button type="button" class="fc-nav-btn" id="fcNextBtn">Next &rarr;</button>';
+  html += '</div>';
+
+  body.innerHTML = html;
+
+  body.querySelector('#fcCatSelect').addEventListener('change', function(e){ vocabState.cardCat = e.target.value; renderVocabCards(level); });
+  body.querySelector('#fcShuffleBtn').addEventListener('click', function(){
+    vocabState.order = shuffleArray(vocabState.order);
+    vocabState.idx = 0; vocabState.flipped = false;
+    renderVocabCards(level);
+  });
+  body.querySelector('#fcCard').addEventListener('click', function(){
+    vocabState.flipped = !vocabState.flipped;
+    this.classList.toggle('flipped');
+  });
+  body.querySelector('#fcPrevBtn').addEventListener('click', function(){
+    if (vocabState.idx > 0){ vocabState.idx--; vocabState.flipped = false; renderVocabCards(level); }
+  });
+  body.querySelector('#fcNextBtn').addEventListener('click', function(){ advanceCard(level); });
+  body.querySelector('#fcLearningBtn').addEventListener('click', function(){ setVocabStatus(level, w.de, 'learning'); advanceCard(level); });
+  body.querySelector('#fcKnowBtn').addEventListener('click', function(){ setVocabStatus(level, w.de, 'known'); advanceCard(level); });
+}
+
+function advanceCard(level){
+  if (vocabState.idx < vocabState.order.length - 1){
+    vocabState.idx++; vocabState.flipped = false;
+    renderVocabCards(level);
+  } else {
+    vocabState.deckDone = true;
+    renderVocabCards(level);
+  }
+}
+
+function renderVocabDeckDone(level, cat, toolbarHtml){
+  var vocabData = VOCAB[level];
+  var known = vocabKnownCount(level);
+  var body = document.getElementById('vocabBody');
+  var html = toolbarHtml;
+  html += '<div class="fc-done">';
+  html += '  <div class="fd-ic">&#127881;</div>';
+  html += '  <h2>Deck complete!</h2>';
+  html += '  <p class="vocab-sub">' + known + ' / ' + vocabData.count + ' words marked as known in this level so far.</p>';
+  html += '  <div class="fc-done-actions">';
+  html += '    <button type="button" class="fc-btn-primary" id="fcRestartBtn">Restart deck</button>';
+  html += '    <button type="button" class="fc-btn-secondary" id="fcBrowseBtn">Back to Browse</button>';
+  html += '  </div>';
+  html += '</div>';
+  body.innerHTML = html;
+  body.querySelector('#fcCatSelect').addEventListener('change', function(e){ vocabState.cardCat = e.target.value; renderVocabCards(level); });
+  body.querySelector('#fcRestartBtn').addEventListener('click', function(){
+    vocabState.order = shuffleArray(vocabState.order);
+    vocabState.idx = 0; vocabState.flipped = false; vocabState.deckDone = false;
+    renderVocabCards(level);
+  });
+  body.querySelector('#fcBrowseBtn').addEventListener('click', function(){ location.hash = '#/vocab/' + level + '/browse'; });
+}
+
+function buildQuizPool(level){
+  var vocabData = VOCAB[level];
+  var all = [];
+  vocabData.categories.forEach(function(c){ c.words.forEach(function(w){ all.push(w); }); });
+  var shuffled = shuffleArray(all);
+  var n = Math.min(10, shuffled.length);
+  return shuffled.slice(0, n).map(function(w){
+    var distractors = shuffleArray(all.filter(function(o){ return o.en !== w.en; })).slice(0, 3).map(function(o){ return o.en; });
+    var options = shuffleArray([w.en].concat(distractors));
+    return { word: w, options: options, correct: w.en };
+  });
+}
+
+function renderVocabQuiz(level){
+  if (!vocabState.quiz || vocabState.quiz.level !== level){
+    vocabState.quiz = { level: level, questions: buildQuizPool(level), idx: 0, score: 0, answered: false };
+  }
+  var q = vocabState.quiz;
+  if (q.idx >= q.questions.length) return renderVocabQuizResult(level);
+
+  var question = q.questions[q.idx];
+  var body = document.getElementById('vocabBody');
+  var html = '<div class="quiz-wrap">';
+  html += '  <div class="quiz-top"><span>Question ' + (q.idx+1) + ' / ' + q.questions.length + '</span><span class="quiz-score">Score: ' + q.score + '</span></div>';
+  html += '  <div class="quiz-q-card"><div class="quiz-q-eyebrow">What does this mean?</div><div class="quiz-q-word">' + question.word.de + '</div></div>';
+  html += '  <div class="quiz-options">';
+  question.options.forEach(function(opt, i){ html += '<button type="button" class="quiz-option" data-opt="' + i + '">' + opt + '</button>'; });
+  html += '  </div>';
+  html += '  <div class="quiz-next-wrap" id="quizNextWrap"></div>';
+  html += '</div>';
+  body.innerHTML = html;
+
+  body.querySelectorAll('.quiz-option').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (q.answered) return;
+      q.answered = true;
+      var chosenIdx = parseInt(btn.getAttribute('data-opt'), 10);
+      var chosen = question.options[chosenIdx];
+      if (chosen === question.correct) q.score++;
+      body.querySelectorAll('.quiz-option').forEach(function(b2){
+        var val = question.options[parseInt(b2.getAttribute('data-opt'), 10)];
+        if (val === question.correct) b2.classList.add('correct');
+        else if (b2 === btn) b2.classList.add('wrong');
+        b2.disabled = true;
+      });
+      var nextWrap = document.getElementById('quizNextWrap');
+      nextWrap.innerHTML = '<button type="button" class="fc-btn-primary" id="quizNextBtn">' + (q.idx < q.questions.length-1 ? 'Next question &rarr;' : 'See results') + '</button>';
+      document.getElementById('quizNextBtn').addEventListener('click', function(){
+        q.idx++; q.answered = false;
+        renderVocabQuiz(level);
+      });
+    });
+  });
+}
+
+function renderVocabQuizResult(level){
+  var q = vocabState.quiz;
+  var pct = Math.round((q.score / q.questions.length) * 100);
+  var msg = pct === 100 ? 'Perfect score!' : pct >= 70 ? 'Great work!' : pct >= 40 ? 'Good effort, keep practicing.' : 'Keep practicing, you will get there.';
+  var body = document.getElementById('vocabBody');
+  var html = '<div class="quiz-result">';
+  html += '  <div class="fd-ic">' + (pct>=70?'&#127942;':'&#128170;') + '</div>';
+  html += '  <div class="qr-score">' + q.score + ' / ' + q.questions.length + '</div>';
+  html += '  <div class="qr-label">' + pct + '% correct</div>';
+  html += '  <p class="qr-msg">' + msg + '</p>';
+  html += '  <div class="fc-done-actions">';
+  html += '    <button type="button" class="fc-btn-primary" id="quizRetryBtn">Try again</button>';
+  html += '    <button type="button" class="fc-btn-secondary" id="quizCardsBtn">Back to Flashcards</button>';
+  html += '  </div>';
+  html += '</div>';
+  body.innerHTML = html;
+  body.querySelector('#quizRetryBtn').addEventListener('click', function(){
+    vocabState.quiz = { level: level, questions: buildQuizPool(level), idx: 0, score: 0, answered: false };
+    renderVocabQuiz(level);
+  });
+  body.querySelector('#quizCardsBtn').addEventListener('click', function(){ location.hash = '#/vocab/' + level + '/cards'; });
+}
+
+function renderTopic(k, silent){
+  var entry = TOPIC_INDEX[k];
+  if (!entry){ currentKey = '__dashboard__'; return renderDashboard(); }
+  var t = entry.topic, lv = entry.level;
+  var idx = FLAT.findIndex(function(f){ return f.key === k; });
+  var prev = idx > 0 ? FLAT[idx-1] : null;
+  var next = idx < FLAT.length-1 ? FLAT[idx+1] : null;
+  var isDone = !!progress.completed[k];
+
+  var html = '';
+  html += '<div class="crumb"><a href="#/dashboard">Dashboard</a><span class="sep">/</span><a href="#/dashboard">Level ' + lv.code + '</a><span class="sep">/</span><span class="cur">Unit ' + String(t.unit).padStart(2,'0') + '</span></div>';
+  html += '<div class="eyebrow">German Course <span class="dot">&bull;</span> Level ' + lv.code + ' <span class="dot">&bull;</span> Unit ' + String(t.unit).padStart(2,'0') + '</div>';
+  html += '<div class="title-row"><h1 class="t-title"><span class="de">' + t.title_de + '</span><span class="en">' + t.title_en + '</span></h1><div class="unit-badge">' + t.icon + '</div></div>';
+  html += '<span class="tag-pill">' + t.tag + '</span>';
+  html += '<p class="summary">' + t.summary + '</p>';
+  html += '<hr class="rule">';
+  html += cardGrid(t.cards);
+  html += pinBox(t.rule_note, 'Key idea');
+  html += statBar(t.stats);
+  html += tablePanel(t);
+  html += rulesTable(t);
+  html += exampleBox(t.example_main);
+  html += extraExamples(t.extra_examples);
+  html += noteBox('tip', '&#128161;', 'Tip', t.tip);
+  html += noteBox('warn', '&#9888;&#65039;', 'Watch out', t.warning);
+  html += quickCheck(t.quick_check);
+
+  html += '<div class="topic-foot">';
+  html += '  <button class="complete-btn' + (isDone?' done':'') + '" id="completeBtn">' + (isDone ? '&#10003; Marked as complete' : 'Mark this topic complete') + '</button>';
+  html += '  <div class="nav-pair">';
+  html += prev ? '<a class="nav-btn prev" href="#/' + prev.key + '"><span class="nb-lbl">&larr; Previous</span><span class="nb-name">' + prev.topic.title_en + '</span></a>' : '<div class="nav-spacer"></div>';
+  html += next ? '<a class="nav-btn next" href="#/' + next.key + '"><span class="nb-lbl">Next &rarr;</span><span class="nb-name">' + next.topic.title_en + '</span></a>' : '<div class="nav-spacer"></div>';
+  html += '  </div>';
+  html += '</div>';
+
+  var view = document.getElementById('view');
+  view.setAttribute('data-level', lv.code);
+  view.innerHTML = html;
+
+  document.getElementById('completeBtn').addEventListener('click', function(){ toggleComplete(k); });
+  view.querySelectorAll('.qc-item').forEach(function(el){
+    el.addEventListener('click', function(){ el.classList.toggle('open'); });
+  });
+
+  if (!silent) highlightActiveLink();
+}
+
+})();
+</script>
+
+</body></html>
