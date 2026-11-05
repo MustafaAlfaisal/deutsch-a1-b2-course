@@ -498,6 +498,15 @@ table.rules tbody td:nth-child(2){ font-weight:600; width:30%; }
 .fc-face .fc-ex-en{ font-size:calc(11.4px * var(--fs)); color:var(--text-faint); }
 .fc-face .fc-hint{ position:absolute; bottom:14px; font-size:calc(10px * var(--fs)); color:var(--text-faint); letter-spacing:.3px; }
 .fc-face .fc-cat{ position:absolute; top:14px; font-size:calc(9.5px * var(--fs)); color:var(--text-faint); text-transform:uppercase; letter-spacing:.5px; }
+.fc-speak{
+  display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; width:40px; height:40px; margin-top:14px;
+  border-radius:999px; border:1.4px solid var(--border); background:var(--surface); color:var(--level-text);
+  font-size:calc(16px * var(--fs)); cursor:pointer; transition:background .15s, border-color .15s;
+}
+.fc-speak:hover{ border-color:var(--level); }
+.fc-speak.playing{ background:var(--level); border-color:var(--level); color:#fff; }
+.fc-speak.unavailable{ opacity:.45; cursor:not-allowed; }
+.fc-speak-note{ margin-top:6px; font-size:calc(10px * var(--fs)); color:var(--text-faint); max-width:260px; }
 
 .fc-controls{ display:flex; align-items:center; justify-content:center; gap:10px; max-width:480px; margin:0 auto; flex-wrap:wrap; }
 .fc-nav-btn{
@@ -566,6 +575,7 @@ table.rules tbody td:nth-child(2){ font-weight:600; width:30%; }
   font-size:calc(11.5px * var(--fs)); color:var(--text-faint); border-top:1px solid var(--border-soft);
 }
 .app-footer .footer-heart{ color:#E8475C; display:inline-block; }
+.app-footer a{ color:inherit; }
 @media (max-width:860px){ .app-footer{ padding:16px 18px 30px 18px; } }
 </style>
 
@@ -604,7 +614,7 @@ table.rules tbody td:nth-child(2){ font-weight:600; width:30%; }
     <div id="view" class="view">
       <div class="empty-state">Loading course&hellip;</div>
     </div>
-    <footer class="app-footer">Made with <span class="footer-heart">&#10084;&#65039;</span> by Mustafa Alfaisal and Claude for the World</footer>
+    <footer class="app-footer">Made with <span class="footer-heart">&#10084;&#65039;</span> by Mustafa Alfaisal and Claude for the World &middot; <a href="audio/credits.html">Audio credits</a></footer>
   </main>
 </div>
 
@@ -670,6 +680,72 @@ function resetProgress(){
 }
 document.getElementById('resetBtn').addEventListener('click', resetProgress);
 
+
+/* ---------------- pronunciation ---------------- */
+// Native-speaker recordings (built by build_audio.py) where available, else the browser's German voice.
+var AUDIO = {};                  // "der Tisch" -> "tisch.mp3"
+var speech = { audio:null, btn:null, voice:null };
+
+fetch('audio/manifest.json').then(function(r){ return r.ok ? r.json() : {}; }).then(function(m){ AUDIO = m || {}; }).catch(function(){});
+
+function pickGermanVoice(){
+  if (!window.speechSynthesis) return null;
+  var de = speechSynthesis.getVoices().filter(function(v){ return /^de([-_]|$)/i.test(v.lang); });
+  function score(v){
+    var s = 0;
+    if (/^de[-_]DE/i.test(v.lang)) s += 4;                                   // standard German over AT/CH
+    if (/natural|neural|online|premium|enhanced|google/i.test(v.name)) s += 2; // the higher-quality voices
+    if (v.localService) s += 1;
+    return s;
+  }
+  de.sort(function(a, b){ return score(b) - score(a); });
+  return de[0] || null;
+}
+if (window.speechSynthesis){
+  speech.voice = pickGermanVoice();
+  speechSynthesis.addEventListener('voiceschanged', function(){ speech.voice = pickGermanVoice(); });
+}
+
+function stopSpeaking(){
+  if (speech.audio){ speech.audio.pause(); speech.audio = null; }
+  if (window.speechSynthesis) speechSynthesis.cancel();
+  if (speech.btn){ speech.btn.classList.remove('playing'); speech.btn = null; }
+}
+
+function speakWithBrowser(text, btn){
+  if (!speech.voice) speech.voice = pickGermanVoice();
+  if (!speech.voice){
+    // no German voice on this device: stay silent rather than read German with an English voice
+    btn.classList.remove('playing');
+    btn.classList.add('unavailable');
+    speech.btn = null;
+    if (!btn.parentNode.querySelector('.fc-speak-note')){
+      btn.insertAdjacentHTML('afterend', '<div class="fc-speak-note">No recording for this word yet, and this device has no German voice installed.</div>');
+    }
+    return;
+  }
+  var u = new SpeechSynthesisUtterance(text);
+  u.lang = speech.voice.lang;
+  u.voice = speech.voice;
+  u.rate = 0.9;
+  function done(){ if (speech.btn === btn){ btn.classList.remove('playing'); speech.btn = null; } }
+  u.onend = u.onerror = done;
+  speechSynthesis.speak(u);
+  // some browsers never fire onend (e.g. no voice installed), so don't leave the button lit
+  setTimeout(function(){ if (!speechSynthesis.speaking && !speechSynthesis.pending) done(); }, 1500 + text.length * 120);
+}
+
+function speakGerman(text, btn){
+  stopSpeaking();
+  speech.btn = btn;
+  btn.classList.add('playing');
+  var file = AUDIO[text];
+  if (!file){ speakWithBrowser(text, btn); return; }
+  var a = new Audio('audio/' + encodeURIComponent(file));
+  speech.audio = a;
+  a.onended = function(){ if (speech.audio === a){ btn.classList.remove('playing'); speech.audio = null; speech.btn = null; } };
+  a.play().catch(function(){ if (speech.audio === a){ speech.audio = null; speakWithBrowser(text, btn); } });
+}
 
 function key(levelCode, unit){ return levelCode + '-' + unit; }
 
@@ -1171,6 +1247,7 @@ function buildCardPool(level, cat){
 }
 
 function renderVocabCards(level){
+  stopSpeaking();
   var vocabData = VOCAB[level];
   var cats = vocabData.categories;
   var cat = vocabState.cardCat || 'all';
@@ -1208,7 +1285,7 @@ function renderVocabCards(level){
   var html = toolbarHtml;
   html += '<div class="fc-progress"><span>' + (vocabState.idx+1) + ' / ' + vocabState.order.length + '</span><div class="fc-progress-bar"><i style="width:' + pct + '%"></i></div></div>';
   html += '<div class="fc-stage"><div class="fc-card' + (vocabState.flipped?' flipped':'') + '" id="fcCard"><div class="fc-card-inner">';
-  html += '  <div class="fc-face front"><span class="fc-cat">' + w.icon + ' ' + w.cat + '</span><span class="fc-pos">' + w.pos + '</span><div class="fc-word">' + w.de + '</div><div class="fc-hint">Tap to reveal</div></div>';
+  html += '  <div class="fc-face front"><span class="fc-cat">' + w.icon + ' ' + w.cat + '</span><span class="fc-pos">' + w.pos + '</span><div class="fc-word">' + w.de + '</div><button type="button" class="fc-speak" data-say="' + escAttr(w.de) + '" title="Listen" aria-label="Listen to the word">&#128266;</button><div class="fc-hint">Tap to reveal</div></div>';
   html += '  <div class="fc-face back"><span class="fc-cat">' + w.icon + ' ' + w.cat + '</span><div class="fc-en">' + w.en + '</div><div class="fc-ex-de">' + w.ex_de + '</div><div class="fc-ex-en">' + w.ex_en + '</div></div>';
   html += '</div></div></div>';
   html += '<div class="fc-controls">';
@@ -1225,6 +1302,9 @@ function renderVocabCards(level){
     vocabState.order = shuffleArray(vocabState.order);
     vocabState.idx = 0; vocabState.flipped = false;
     renderVocabCards(level);
+  });
+  body.querySelectorAll('.fc-speak').forEach(function(btn){
+    btn.addEventListener('click', function(e){ e.stopPropagation(); speakGerman(btn.getAttribute('data-say'), btn); });
   });
   body.querySelector('#fcCard').addEventListener('click', function(){
     vocabState.flipped = !vocabState.flipped;
